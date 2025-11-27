@@ -1,0 +1,109 @@
+/* Chat Button Styles */
+.chat-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.chat-btn:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Chat Popup */
+.chat-container {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chat-box {
+  width: 300px;
+  background: white;
+  border: 2px solid #d0eaff;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.chat-header {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.1rem;
+  animation: pulseColor 4s infinite alternate;
+}
+
+.chat-content {
+  padding: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.chat-bubble {
+  background: linear-gradient(145deg, #f0faff, #e0f7ff);
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.5s;
+  font-weight: 500;
+}
+
+.chat-bubble:hover {
+  transform: scale(1.03);
+  background: linear-gradient(145deg, #add8e6, #d0eaff);
+}
+
+.chat-answer {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  animation: fadeInAnswer 0.4s ease;
+}
+
+.back-button {
+  margin-top: 10px;
+  background-color: #007cf0;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #1a7a94;
+}
+
+@keyframes fadeInAnswer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseColor {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}

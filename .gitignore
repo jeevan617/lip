@@ -1,0 +1,23 @@
+lip/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large Model Files
+*.pth
+*.pt
+*.onnx
+
+# Recorded Videos
+*.mp4
+*.webm
+*.avi
+
+# Logs and Temp
+*.log
+tmp/
+
+# Specific large directories
+lipmain/BaiduPCS-Go/
+lipmain/face_detection/

@@ -1,0 +1,228 @@
+/* Full-screen layout with animated background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f2f2f7, #f9f1f4, #f8f6f6);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    overflow-x: hidden;
+  }
+  
+  /* Keyframe for background animation */
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Home main wrapper */
+  .home-container {
+    padding: 80px 20px; /* top padding for navbar space */
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animated gradient text heading */
+  .home-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px; /* Space below the title */
+  }
+  
+  /* Gradient text letters with animation */
+  .gradient-letter {
+    background: linear-gradient(45deg, #fff, #ffd6e3, #ff7eb3);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: floatIn 0.6s ease forwards;
+    opacity: 0;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .gradient-letter:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Letter animation */
+  @keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Subtitle animation */
+  .home-subtitle {
+    font-size: 1.25rem;
+    color: #0f0e0e;
+    max-width: 700px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeInUp 1s ease 1s forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button section */
+  .home-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .home-button {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(255, 126, 179, 0.4);
+  }
+  
+  .home-button.outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  .home-button.outline:hover {
+    background-color: #fff;
+    color: #ff7eb3;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .home-title {
+      font-size: 2.5rem;
+    }
+    .home-button {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
+    .home-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .home-title {
+      font-size: 2rem;
+    }
+    .home-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  /* Flowing title for the effect you requested */
+  .flowing-title {
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(270deg, #cfd9df, #a6c0fe, #8ec5fc, #e0c3fc);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: waterFlow 8s ease infinite;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px; /* Added space below flowing title */
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .flowing-title:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Water flow animation for text */
+  @keyframes waterFlow {
+    0% {
+      background-position: 100% 100%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Extra space below the "flowing title" and before other elements */
+  .flowing-title-spacing {
+    margin-bottom: 50px; /* Adds more space */
+  }
+  .lipbuddy-gradient {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(270deg, #c0c0c0, #8ec5fc, #c0c0c0);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: silverBlueFlow 8s ease infinite;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.lipbuddy-gradient:hover {
+  transform: scale(1.05);
+}
+
+@keyframes silverBlueFlow {
+  0% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+.lipbuddy-gradient .word {
+  display: inline-block;
+  margin: 0 10px;
+}

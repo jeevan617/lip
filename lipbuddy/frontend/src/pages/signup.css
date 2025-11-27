@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f7;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Auth container: lowered and centered */
+.auth-container {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7); /* pink & soft red */
+  border-radius: 25px;
+  max-width: 350px;
+  padding: 30px;
+  margin: 12% auto 0 auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.signup-title {
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  animation: bounce 1.8s infinite;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button.fancy-button {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+button.fancy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+button.link-button {
+  background: none;
+  color: #8a2be2;
+  border: none;
+  margin-top: 15px;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.link-button:focus,
+button.link-button:active {
+  outline: none;
+  background: none;
+  color: #8a2be2;
+}
+
+.error {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #007f5f;
+  margin-bottom: 10px;
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f2f2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Bigger animated loading text */
+.loading-text {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+
+.loading-text span {
+  animation: bounceChar 1.2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes bounceChar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f2f2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.loading-text {
+  font-family: 'Poppins', sans-serif; /* clean modern font */
+  font-size: 28px;                    /* bigger font */
+  color: #222;                        /* dark gray for contrast */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.loading-text span {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: dropLetter 0.4s ease forwards;
+}
+
+@keyframes dropLetter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.success-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  color: #2d6a4f;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  padding: 10px 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

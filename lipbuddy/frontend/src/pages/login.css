@@ -1,0 +1,168 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f2f2f7;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Auth container: lowered and centered */
+.auth-container {
+  background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  border-radius: 25px;
+  max-width: 350px;
+  padding: 30px;
+  margin: 12% auto 0 auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* WELCOME text with bounce */
+.login-title {
+  font-family: 'Press Start 2P', cursive;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  animation: bounceTitle 1.8s infinite;
+}
+
+@keyframes bounceTitle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button.fancy-button {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+button.fancy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+button.link-button {
+  background: none;
+  color: #444;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+button.link-button:hover {
+  color: hsl(231, 16%, 91%); /* Optional hover effect */
+}
+/* Prevent blue background/focus glow */
+button.link-button:focus,
+button.link-button:active {
+  outline: none;
+  background: none;
+  color: #d2cfd9;
+  box-shadow: none;
+}
+
+.error {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #007f5f;
+  margin-bottom: 10px;
+}
+
+/* Fullscreen loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f2f2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Logging in animation text */
+.loading-text {
+  font-family: 'Orbitron', sans-serif; /* ⬅️ unique font just for this */
+  font-size: 24px;
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+
+.loading-text span {
+  animation: bounceChar 1.2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes bounceChar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}/* Mode selector buttons */
+.mode-selector {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.mode-selector button {
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.3s ease;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(6px);
+}
+
+.mode-selector button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.mode-selector button.selected,
+.mode-selector button:focus-visible {
+  outline: none;
+  background: linear-gradient(135deg, #6b5bff 0%, #b74dff 100%);
+  color: #fff;
+  filter: drop-shadow(0 0 8px rgba(183, 77, 255, 0.45));
+}
